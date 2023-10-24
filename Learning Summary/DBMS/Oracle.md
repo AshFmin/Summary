@@ -1,3 +1,23 @@
+### Oracle 创建数据表
+
+```sql
+-- oracle不能像mysql一样建表时直接将描述加在后面
+-- 要在表已经建好的情况下去加
+create table tb_test (
+	f1 varchar2(20),
+    f2 varchar2(20)
+);
+comment on table tb_test is 'xxx';
+comment on column tb_test.xxx  is 'xxx';
+
+-- 添加约束的时
+-- default 和 not null的顺序也有要求 default在前 not null在后
+create table tb_test (
+	f1 varchar2(20) default 'xxx' not null,
+    f2 varchar2(20)
+);
+```
+
 ## 复制数据库表
 
 ```sql
@@ -12,8 +32,6 @@ create table tb_new as
 select * 
 from tb_old;
 ```
-
-
 
 ## Merge into
 
@@ -43,11 +61,6 @@ when not matched then      --当关联条件不成立时
 -- 在控制文件中需要生成对应的数据表结构
 -- 若数据表字段没有设置 则默认为char(255) 与数据库实际表字段类型无关
 -- 若导入数据超出该字段 则会报错 故需要修改 .ctl文件 
-
-
-
-
-
-
+-- 需要对数据表字段给出具体类型设置
 ```
 
