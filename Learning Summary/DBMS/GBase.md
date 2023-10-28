@@ -4,7 +4,9 @@
 
 ```sql
 -- gbase的 merge into 和 oracle 不同 有很多限制
---
+merge into tb_A
+using ()
+on ()
 ```
 
 
