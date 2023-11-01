@@ -1,4 +1,17 @@
-### Oracle 创建数据表
+## 数据类型
+
+```sql
+-- oracle中没有int类型
+-- 默认int 会转化为 NUMBER(38)
+```
+
+
+
+
+
+
+
+## Oracle 创建数据表
 
 ```sql
 -- oracle不能像mysql一样建表时直接将描述加在后面
