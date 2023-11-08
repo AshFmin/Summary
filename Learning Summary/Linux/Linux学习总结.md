@@ -2610,6 +2610,12 @@ exit 0
 # bash会创建一个子进程 exit从子进程返回
 ```
 
+### 重定向与管道
+
+
+
+
+
 ### source 和 export
 
 "source" 和 ". " 作用相同，在**当前shell进程**中执行shell文件中的命令
@@ -2775,38 +2781,60 @@ fi
 > - non-interactive + login: 读取 /etc/profile 和 ~/.profile
 > - interactive + non-login: 读取 ENV 环境变量对应的文件
 > - non-interactive + non-login: 不读取任何文件
+>
+> 当bash 以POSIX模式启动 读取 ENV 环境变量对应的文件
 
 #### 为什么需要source 修改的配置文件才能生效
 
 由于获得的Shell terminal 已经加载过一遍配置文件了，但将相应的配置文件修改，不会影响到正在运行的Shell进程中变量的值，故需要使用source将配置文件重新载入Shell进程中才能生效。
 
-### 远程连接shell
-
-1. 使用ssh登录到服务器再执行脚本或者命令
-
-程序采用了**non interactive + non login shell**
-
-2. 使用ssh执行远程命令和脚本
-
 ### Linux shell进程
 
 Shell 会创建子进程的方式：
 
-1. 直接执行脚本 bash xx.sh    ./xx.sh
+- 直接执行脚本 bash xx.sh    ./xx.sh
+- 通过管道执行命令 
+- cat filename | while read line ； do xxx done
+- bash命令
 
-2. 通过管道执行命令 
+> Linux 进程由 fork创建 
+>
+> 创建shell子进程类似 fork + exec(bash)
+>
+> 而执行shell时会根据shell的类型读取一些配置文件 
 
-   cat filename | while read line  
+### 远程连接shell
 
-   do 
+1. 使用ssh登录到服务器再执行脚本或者命令
 
-   ​	xxx 
+获得的服务器终端shell是 **interactive + login shell**
 
-   done
+在子shell进程中执行的脚本或命令，该子shell进程是**non interactive + non login shell** 会继承父shell的环境变量
 
-3. hahah
+2. 使用ssh执行远程命令和脚本
+
+**non interactive + non login shell** 
 
 
+
+### 综合案例
+
+```shell
+# 描述
+
+
+
+```
+
+
+
+
+
+
+
+
+
+### 
 
 
 
