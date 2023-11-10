@@ -2876,3 +2876,9 @@ Linux链接分两种：一种被称为硬链接（Hard Link），另一种被称
 
 按下 **ctrl + q** 即可退出这种状态，让终端继续运行
 
+
+
+### 空间占用
+
+no space left on device
+
