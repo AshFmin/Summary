@@ -1,5 +1,0 @@
-$today=Get-Date
-$today=$today.ToString('yyyyMMdd')
-git add .
-git commit -m "$today lc"
-git push
