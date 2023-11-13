@@ -1,5 +1,17 @@
 # GBase学习
 
+### 基础SQL
+
+```sql
+-- create table
+
+
+```
+
+
+
+
+
 ### merge into
 
 ```sql
