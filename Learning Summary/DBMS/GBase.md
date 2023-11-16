@@ -3,7 +3,9 @@
 ### 基础SQL
 
 ```sql
--- create table
+-- create table 
+
+-- distributed by hash列
 
 
 ```
