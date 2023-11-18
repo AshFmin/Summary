@@ -7,6 +7,13 @@
 
 -- distributed by hash列
 
+-- 查询表的hash_col
+select * from gbase.table_distribution where dbname='' and tbname='';
+
+
+-- 查看数据加载错误原因 
+show gcluster load logs task_id limit 1,10;
+
 
 ```
 
@@ -21,6 +28,13 @@
 merge into tb_A
 using ()
 on ()
+-- on条件必须包含 hash_col
+
+
+-- update 和 insert 不能包含where子句
+
+
+
 ```
 
 
