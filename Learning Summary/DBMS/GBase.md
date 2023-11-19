@@ -54,3 +54,19 @@ create temporary table tb(
 
 
 
+### gccli 和 gncli
+
+```shell
+# gccli 对应/opt/gbase/gcluster/server/bin/gbase
+# gncli 对应/opt/gbase/gnode/server/bin/gbase
+
+# gccli连接的是整个集群 其SQL也会分发到所有节点执行
+# gncli只连接集群某个节点
+# 对应的普通分布表 在gccli里看到的是简单的表名 例如t1,
+# 在gncli里则包含了节点分片的名字 例如t1_n3。
+
+# 部分说法gccli是gbase的软连接 这种说法并不正确
+# gccli源码
+# 可以看到 gccli并不是gbase的软连接 而是在gbase的基础上进行了环境变量的配置 类似装饰器模式
+```
+
