@@ -68,5 +68,10 @@ create temporary table tb(
 # 部分说法gccli是gbase的软连接 这种说法并不正确
 # gccli源码
 # 可以看到 gccli并不是gbase的软连接 而是在gbase的基础上进行了环境变量的配置 类似装饰器模式
+
+
+set headings off 
+
+
 ```
 
