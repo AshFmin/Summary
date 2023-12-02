@@ -14,6 +14,9 @@ select * from gbase.table_distribution where dbname='' and tbname='';
 -- 查看数据加载错误原因 
 show gcluster load logs task_id limit 1,10;
 
+-- 查看表结构
+show columns from schema.tablename;
+eg: show columns from gbaseJTX.test_columns;
 
 ```
 
