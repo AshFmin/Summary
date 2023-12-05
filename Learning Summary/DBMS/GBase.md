@@ -73,7 +73,18 @@ create temporary table tb(
 # 可以看到 gccli并不是gbase的软连接 而是在gbase的基础上进行了环境变量的配置 类似装饰器模式
 
 
-set headings off 
+
+
+
+```
+
+
+
+### 字符串拼接
+
+```sql
+select tb.A || tb.B || '123' from tb_test tb;
+-- Gbase 做字符串拼接时 若某一项为 NULL 那么整个结果就会为 NULL
 
 
 ```

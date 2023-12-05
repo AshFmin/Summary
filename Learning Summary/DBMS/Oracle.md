@@ -71,6 +71,31 @@ when not matched then      --当关联条件不成立时
 -- 需要对数据表字段给出具体类型设置
 ```
 
+
+
+### SQLPLUS
+
+```sql
+set headings off; 
+set linesize 1000;
+set pagesize 1000;
+```
+
+
+
+### 临时表
+
+```sql
+-- temporary table
+
+-- session 
+
+-- connection
+
+```
+
+
+
 ## 存储过程
 
 
