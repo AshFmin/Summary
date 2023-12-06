@@ -2904,3 +2904,4 @@ Linux链接分两种：一种被称为硬链接（Hard Link），另一种被称
 
 no space left on device
 
+rm df-h
