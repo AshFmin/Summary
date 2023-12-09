@@ -5,6 +5,18 @@
 -- 默认int 会转化为 NUMBER(38)
 ```
 
+### 查找表字段
+
+```sql
+select column_name from all_tab_columns where table_name = 'xxx';
+
+
+
+
+```
+
+
+
 ## Oracle 创建数据表
 
 ```sql
@@ -97,6 +109,11 @@ set pagesize 1000;
 
 
 ## 存储过程
+
+```sql
+-- 查看存储过程的内容
+select text from all_source where type='PROCEDURE' and name = 'proc_xxxxx';
+```
 
 
 
