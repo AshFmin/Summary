@@ -14,9 +14,18 @@ select * from gbase.table_distribution where dbname='' and tbname='';
 -- 查看数据加载错误原因 
 show gcluster load logs task_id limit 1,10;
 
+
+-- The number of data columns is less than the number of columns defined：文件列数少于表的指定列数。数据按照分隔符切分的字段数量和表或指定的字段数量不匹配导致。
+-- text parser error：是因为数据按照分隔符切分的字段数量和表或指定的字段数量不匹配导致，文件列数多于表的列数。
+-- Out of range value：错误是因为数据超过了范围，包括数字过大或过小，日期超过限制等。
+-- Validate error：当数据某一列的值，无法转换为表对应字段类型时，比如带字母的字符串转化为数字，则会报该错误。原因可能是列的顺序匹配错误，或原始数据采集问题
+
+
 -- 查看表结构
 show columns from schema.tablename;
 eg: show columns from gbaseJTX.test_columns;
+
+
 
 ```
 
